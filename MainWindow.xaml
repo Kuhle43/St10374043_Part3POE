@@ -1,0 +1,53 @@
+﻿<Window x:Class="Recipemanager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Recipe Application" Height="600" Width="800" Background="LightGray">
+    <Grid>
+        <Border BorderBrush="DarkGray" BorderThickness="1" CornerRadius="5" Background="White" Margin="10">
+            <StackPanel>
+                <TextBlock Text="Recipe Name" Margin="0,10,0,5" />
+                <TextBox x:Name="RecipeNameTextBox" Margin="0,0,0,10" Width="200"/>
+
+                <TextBlock Text="Ingredient Name" Margin="0,10,0,5" />
+                <TextBox x:Name="IngredientNameTextBox" Margin="0,0,0,10" Width="200"/>
+
+                <TextBlock Text="Ingredient Quantity" Margin="0,10,0,5" />
+                <TextBox x:Name="IngredientQuantityTextBox" Margin="0,0,0,10" Width="200"/>
+
+                <TextBlock Text="Ingredient Unit" Margin="0,10,0,5" />
+                <TextBox x:Name="IngredientUnitTextBox" Margin="0,0,0,10" Width="200"/>
+
+                <TextBlock Text="Ingredient Calories" Margin="0,10,0,5" />
+                <TextBox x:Name="IngredientCaloriesTextBox" Margin="0,0,0,10" Width="200"/>
+
+                <TextBlock Text="Ingredient Food Group" Margin="0,10,0,5" />
+                <ComboBox x:Name="IngredientFoodGroupComboBox" Margin="0,0,0,10" Width="200">
+                    <ComboBoxItem Content="Grains" />
+                    <ComboBoxItem Content="Sweets" />
+                    <ComboBoxItem Content="Vegetables" />
+                    <ComboBoxItem Content="Fruits" />
+                    <ComboBoxItem Content="Proteins" />
+                </ComboBox>
+
+                <Button Content="Add Ingredient" Click="AddIngredientButton_Click" Margin="0,10,0,10" Width="200" Background="#4CAF50" Foreground="White" FontWeight="Bold" />
+                <Button Content="Clear Ingredient Fields" Click="ClearIngredientFieldsButton_Click" Margin="0,0,0,10" Width="200" Background="#FF5252" Foreground="White" FontWeight="Bold" />
+
+                <TextBlock Text="Step Description" Margin="0,10,0,5" />
+                <TextBox x:Name="StepDescriptionTextBox" Margin="0,0,0,10" Width="200"/>
+
+                <Button Content="Add Step" Click="AddStepButton_Click" Margin="0,10,0,10" Width="200" Background="#2196F3" Foreground="White" FontWeight="Bold" />
+                <Button Content="Clear Step Description" Click="ClearStepDescriptionButton_Click" Margin="0,0,0,10" Width="200" Background="#FF5252" Foreground="White" FontWeight="Bold" />
+
+                <Button Content="Add Recipe" Click="AddRecipeButton_Click" Margin="0,10,0,10" Width="200" Background="#FF9800" Foreground="White" FontWeight="Bold" />
+                <Button Content="Filter Recipes" Click="FilterRecipesButton_Click" Margin="0,10,0,10" Width="200" Background="#607D8B" Foreground="White" FontWeight="Bold" />
+                <Button Content="Reset Recipes" Click="ResetRecipesButton_Click" Margin="0,10,0,10" Width="200" Background="#FF5252" Foreground="White" FontWeight="Bold" />
+
+                <ListBox x:Name="RecipesListBox" Margin="0,20,0,0" Background="#EEEEEE" BorderBrush="DarkGray" BorderThickness="1" />
+
+                <Border BorderBrush="DarkGray" BorderThickness="1" Background="#FAFAFA" Margin="0,20,0,0" Padding="10">
+                    <TextBlock x:Name="RecipeDisplayTextBlock" TextWrapping="Wrap" />
+                </Border>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
